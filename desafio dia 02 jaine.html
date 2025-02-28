@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação com Usuário</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff69b4, #8a2be2, #00bfff);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.2em;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            background: #8a2be2;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #6a1bb1;
+        }
+        .brasoes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .brasao {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 150px;
+        }
+        .brasao img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        function interagirComUsuario() {
+            const nome = document.getElementById("nome").value;
+            const idade = document.getElementById("idade").value;
+            const linguagem = document.getElementById("linguagem").value;
+            
+            if (nome && idade && linguagem) {
+                const resultado = `Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`;
+                document.getElementById("resultado").innerText = resultado;
+            } else {
+                alert("Por favor, preencha todos os campos antes de enviar!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo ao Sistema de Interação!</h1>
+    <div class="container">
+        <p>Digite seus dados abaixo:</p>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <input type="number" id="idade" placeholder="Digite sua idade">
+        <input type="text" id="linguagem" placeholder="Linguagem que está estudando">
+        <button onclick="interagirComUsuario()">Enviar</button>
+        <p id="resultado"></p>
+    </div>
+    
+    <h2>Principais Linguagens de Programação</h2>
+    <div class="brasoes">
+        <div class="brasao">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+            <p>JavaScript: Popular para desenvolvimento web.</p>
+        </div>
+        <div class="brasao">
+            <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java">
+            <p>Java: Amplamente usado para aplicativos empresariais.</p>
+        </div>
+        <div class="brasao">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="Python">
+            <p>Python: Usado em ciência de dados e inteligência artificial.</p>
+        </div>
+        <div class="brasao">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919832.png" alt="C++">
+            <p>C++: Muito usado para sistemas de alto desempenho.</p>
+            <h2>Principais Linguagens de Programação</h2>
+            <div class="brasoes">
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript"><p>JavaScript</p></div>
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java"><p>Java</p></div>
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="Python"><p>Python</p></div>
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/919/919832.png" alt="C++"><p>C++</p></div>
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" alt="PHP"><p>PHP</p></div>
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/919/919841.png" alt="Ruby"><p>Ruby</p></div>
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="Elixir"><p>Elixir</p></div>
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/919/919847.png" alt="Erlang"><p>Erlang</p></div>
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="Go"><p>Go</p></div>
+                <div class="brasao"><img src="https://cdn-icons-png.flaticon.com/512/919/919838.png" alt="Julia"><p>Julia</p></div>
+        </div>
+    </div>
+</body>
+</html>
